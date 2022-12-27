@@ -1,0 +1,836 @@
+dwm.c: In function ‘resizemouse’:
+dwm.c: In function ‘resizemouse’:
+dwm.c:1369:4: error: ‘else’ without a previous ‘if’
+ 1369 |    else
+      |    ^~~~
+dwm.c:1369:4: error: ‘else’ without a previous ‘if’
+ 1369 |    else
+      |    ^~~~
+dwm.c:1388:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1388 | void
+      | ^~~~
+dwm.c:1388:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1388 | void
+      | ^~~~
+dwm.c:1413:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1413 | void
+      | ^~~~
+dwm.c:1413:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1413 | void
+      | ^~~~
+dwm.c:1424:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1424 | void
+      | ^~~~
+dwm.c:1424:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1424 | void
+      | ^~~~
+dwm.c:1451:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1451 | void
+      | ^~~~
+dwm.c:1451:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1451 | void
+      | ^~~~
+dwm.c:1467:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1467 | void
+      | ^~~~
+dwm.c:1467:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1467 | void
+      | ^~~~
+dwm.c:1476:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1476 | int
+      | ^~~
+dwm.c:1476:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1476 | int
+      | ^~~
+dwm.c:1501:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1501 | void
+      | ^~~~
+dwm.c:1501:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1501 | void
+      | ^~~~
+dwm.c:1513:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1513 | void
+      | ^~~~
+dwm.c:1513:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1513 | void
+      | ^~~~
+dwm.c:1541:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1541 | void
+      | ^~~~
+dwm.c:1541:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1541 | void
+      | ^~~~
+dwm.c:1556:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1556 | void
+      | ^~~~
+dwm.c:1556:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1556 | void
+      | ^~~~
+dwm.c:1570:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1570 | void
+      | ^~~~
+dwm.c:1570:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1570 | void
+      | ^~~~
+dwm.c:1642:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1642 | void
+      | ^~~~
+dwm.c:1642:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1642 | void
+      | ^~~~
+dwm.c:1655:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1655 | void
+      | ^~~~
+dwm.c:1655:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1655 | void
+      | ^~~~
+dwm.c:1673:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1673 | void
+      | ^~~~
+dwm.c:1673:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1673 | void
+      | ^~~~
+dwm.c:1681:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1681 | void
+      | ^~~~
+dwm.c:1681:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1681 | void
+      | ^~~~
+dwm.c:1695:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1695 | void
+      | ^~~~
+dwm.c:1695:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1695 | void
+      | ^~~~
+dwm.c:1705:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1705 | void
+      | ^~~~
+dwm.c:1705:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1705 | void
+      | ^~~~
+dwm.c:1713:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1713 | void
+      | ^~~~
+dwm.c:1713:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1713 | void
+      | ^~~~
+dwm.c:1741:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1741 | void
+      | ^~~~
+dwm.c:1741:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1741 | void
+      | ^~~~
+dwm.c:1750:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1750 | void
+      | ^~~~
+dwm.c:1750:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1750 | void
+      | ^~~~
+dwm.c:1764:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1764 | void
+      | ^~~~
+dwm.c:1764:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1764 | void
+      | ^~~~
+dwm.c:1779:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1779 | void
+      | ^~~~
+dwm.c:1779:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1779 | void
+      | ^~~~
+dwm.c:1791:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1791 | void
+      | ^~~~
+dwm.c:1791:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1791 | void
+      | ^~~~
+dwm.c:1804:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1804 | void
+      | ^~~~
+dwm.c:1804:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1804 | void
+      | ^~~~
+dwm.c:1830:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1830 | void
+      | ^~~~
+dwm.c:1830:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1830 | void
+      | ^~~~
+dwm.c:1844:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1844 | void
+      | ^~~~
+dwm.c:1844:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1844 | void
+      | ^~~~
+dwm.c:1866:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1866 | void
+      | ^~~~
+dwm.c:1866:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1866 | void
+      | ^~~~
+dwm.c:1879:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1879 | void
+      | ^~~~
+dwm.c:1879:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1879 | void
+      | ^~~~
+dwm.c:1893:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1893 | int
+      | ^~~
+dwm.c:1893:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1893 | int
+      | ^~~
+dwm.c:1971:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1971 | void
+      | ^~~~
+dwm.c:1971:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1971 | void
+      | ^~~~
+dwm.c:1987:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1987 | void
+      | ^~~~
+dwm.c:1987:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 1987 | void
+      | ^~~~
+dwm.c:2031:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2031 | void
+      | ^~~~
+dwm.c:2031:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2031 | void
+      | ^~~~
+dwm.c:2039:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2039 | void
+      | ^~~~
+dwm.c:2039:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2039 | void
+      | ^~~~
+dwm.c:2048:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2048 | void
+      | ^~~~
+dwm.c:2048:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2048 | void
+      | ^~~~
+dwm.c:2060:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2060 | void
+      | ^~~~
+dwm.c:2060:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2060 | void
+      | ^~~~
+dwm.c:2079:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2079 | void
+      | ^~~~
+dwm.c:2079:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2079 | void
+      | ^~~~
+dwm.c:2091:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2091 | Client *
+      | ^~~~~~
+dwm.c:2091:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2091 | Client *
+      | ^~~~~~
+dwm.c:2104:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2104 | Monitor *
+      | ^~~~~~~
+dwm.c:2104:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2104 | Monitor *
+      | ^~~~~~~
+dwm.c:2124:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2124 | int
+      | ^~~
+dwm.c:2124:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2124 | int
+      | ^~~
+dwm.c:2142:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2142 | int
+      | ^~~
+dwm.c:2142:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2142 | int
+      | ^~~
+dwm.c:2150:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2150 | int
+      | ^~~
+dwm.c:2150:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2150 | int
+      | ^~~
+dwm.c:2157:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2157 | void
+      | ^~~~
+dwm.c:2157:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2157 | void
+      | ^~~~
+dwm.c:2169:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2169 | int
+      | ^~~
+dwm.c:2169:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2169 | int
+      | ^~~
+dwm.c:2170:1: warning: ‘main’ is normally a non-static function [-Wmain]
+ 2170 | main(int argc, char *argv[])
+      | ^~~~
+dwm.c:2170:1: warning: ‘main’ is normally a non-static function [-Wmain]
+ 2170 | main(int argc, char *argv[])
+      | ^~~~
+dwm.c:2193:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2193 | static void bstack(Monitor *m)
+      | ^~~~~~
+dwm.c:2193:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2193 | static void bstack(Monitor *m)
+      | ^~~~~~
+dwm.c:2193:13: error: invalid storage class for function ‘bstack’
+ 2193 | static void bstack(Monitor *m)
+      |             ^~~~~~
+dwm.c:2193:13: error: invalid storage class for function ‘bstack’
+ 2193 | static void bstack(Monitor *m)
+      |             ^~~~~~
+dwm.c:2225:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2225 | static void bstackhoriz(Monitor *m)
+      | ^~~~~~
+dwm.c:2225:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2225 | static void bstackhoriz(Monitor *m)
+      | ^~~~~~
+dwm.c:2225:13: error: invalid storage class for function ‘bstackhoriz’
+ 2225 | static void bstackhoriz(Monitor *m)
+      |             ^~~~~~~~~~~
+dwm.c:2225:13: error: invalid storage class for function ‘bstackhoriz’
+ 2225 | static void bstackhoriz(Monitor *m)
+      |             ^~~~~~~~~~~
+dwm.c:2255:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2255 | void centeredmaster(Monitor *m)
+      | ^~~~
+dwm.c:2255:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2255 | void centeredmaster(Monitor *m)
+      | ^~~~
+dwm.c:2309:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2309 | void centeredfloatingmaster(Monitor *m)
+      | ^~~~
+dwm.c:2309:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2309 | void centeredfloatingmaster(Monitor *m)
+      | ^~~~
+dwm.c:2356:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2356 | void col(Monitor *m)
+      | ^~~~
+dwm.c:2356:1: warning: ISO C forbids nested functions [-Wpedantic]
+ 2356 | void col(Monitor *m)
+      | ^~~~
+dwm.c:2379:1: error: expected declaration or statement at end of input
+ 2379 | }
+      | ^
+dwm.c:2379:1: error: expected declaration or statement at end of input
+ 2379 | }
+      | ^
+dwm.c:2379:1: error: expected declaration or statement at end of input
+dwm.c:2379:1: error: expected declaration or statement at end of input
+dwm.c: At top level:
+dwm.c: At top level:
+dwm.c:195:13: warning: ‘restack’ used but never defined
+  195 | static void restack(Monitor *m);
+      |             ^~~~~~~
+dwm.c:195:13: warning: ‘restack’ used but never defined
+  195 | static void restack(Monitor *m);
+      |             ^~~~~~~
+dwm.c:196:13: warning: ‘run’ declared ‘static’ but never defined [-Wunused-function]
+  196 | static void run(void);
+      |             ^~~
+dwm.c:196:13: warning: ‘run’ declared ‘static’ but never defined [-Wunused-function]
+  196 | static void run(void);
+      |             ^~~
+dwm.c:197:13: warning: ‘scan’ declared ‘static’ but never defined [-Wunused-function]
+  197 | static void scan(void);
+      |             ^~~~
+dwm.c:197:13: warning: ‘scan’ declared ‘static’ but never defined [-Wunused-function]
+  197 | static void scan(void);
+      |             ^~~~
+dwm.c:198:12: warning: ‘sendevent’ used but never defined
+  198 | static int sendevent(Client *c, Atom proto);
+      |            ^~~~~~~~~
+dwm.c:198:12: warning: ‘sendevent’ used but never defined
+  198 | static int sendevent(Client *c, Atom proto);
+      |            ^~~~~~~~~
+dwm.c:199:13: warning: ‘sendmon’ used but never defined
+  199 | static void sendmon(Client *c, Monitor *m);
+      |             ^~~~~~~
+dwm.c:199:13: warning: ‘sendmon’ used but never defined
+  199 | static void sendmon(Client *c, Monitor *m);
+      |             ^~~~~~~
+dwm.c:200:13: warning: ‘setclientstate’ used but never defined
+  200 | static void setclientstate(Client *c, long state);
+      |             ^~~~~~~~~~~~~~
+dwm.c:200:13: warning: ‘setclientstate’ used but never defined
+  200 | static void setclientstate(Client *c, long state);
+      |             ^~~~~~~~~~~~~~
+dwm.c:201:13: warning: ‘setfocus’ used but never defined
+  201 | static void setfocus(Client *c);
+      |             ^~~~~~~~
+dwm.c:202:13: warning: ‘setfullscreen’ used but never defined
+  202 | static void setfullscreen(Client *c, int fullscreen);
+      |             ^~~~~~~~~~~~~
+dwm.c:201:13: warning: ‘setfocus’ used but never defined
+  201 | static void setfocus(Client *c);
+      |             ^~~~~~~~
+dwm.c:202:13: warning: ‘setfullscreen’ used but never defined
+  202 | static void setfullscreen(Client *c, int fullscreen);
+      |             ^~~~~~~~~~~~~
+dwm.c:203:13: warning: ‘setlayout’ used but never defined
+  203 | static void setlayout(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:203:13: warning: ‘setlayout’ used but never defined
+  203 | static void setlayout(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:204:13: warning: ‘setmfact’ used but never defined
+  204 | static void setmfact(const Arg *arg);
+      |             ^~~~~~~~
+dwm.c:204:13: warning: ‘setmfact’ used but never defined
+  204 | static void setmfact(const Arg *arg);
+      |             ^~~~~~~~
+dwm.c:205:13: warning: ‘setup’ declared ‘static’ but never defined [-Wunused-function]
+  205 | static void setup(void);
+      |             ^~~~~
+dwm.c:205:13: warning: ‘setup’ declared ‘static’ but never defined [-Wunused-function]
+  205 | static void setup(void);
+      |             ^~~~~
+dwm.c:206:13: warning: ‘seturgent’ used but never defined
+  206 | static void seturgent(Client *c, int urg);
+      |             ^~~~~~~~~
+dwm.c:206:13: warning: ‘seturgent’ used but never defined
+  206 | static void seturgent(Client *c, int urg);
+      |             ^~~~~~~~~
+dwm.c:207:13: warning: ‘showhide’ used but never defined
+  207 | static void showhide(Client *c);
+      |             ^~~~~~~~
+dwm.c:207:13: warning: ‘showhide’ used but never defined
+  207 | static void showhide(Client *c);
+      |             ^~~~~~~~
+dwm.c:208:13: warning: ‘sigchld’ used but never defined
+  208 | static void sigchld(int unused);
+      |             ^~~~~~~
+dwm.c:208:13: warning: ‘sigchld’ used but never defined
+  208 | static void sigchld(int unused);
+      |             ^~~~~~~
+dwm.c:209:13: warning: ‘spawn’ used but never defined
+  209 | static void spawn(const Arg *arg);
+      |             ^~~~~
+dwm.c:209:13: warning: ‘spawn’ used but never defined
+  209 | static void spawn(const Arg *arg);
+      |             ^~~~~
+dwm.c:210:13: warning: ‘tag’ used but never defined
+  210 | static void tag(const Arg *arg);
+      |             ^~~
+dwm.c:210:13: warning: ‘tag’ used but never defined
+  210 | static void tag(const Arg *arg);
+      |             ^~~
+dwm.c:211:13: warning: ‘tagmon’ used but never defined
+  211 | static void tagmon(const Arg *arg);
+      |             ^~~~~~
+dwm.c:211:13: warning: ‘tagmon’ used but never defined
+  211 | static void tagmon(const Arg *arg);
+      |             ^~~~~~
+dwm.c:212:13: warning: ‘tile’ used but never defined
+  212 | static void tile(Monitor *m);
+      |             ^~~~
+dwm.c:212:13: warning: ‘tile’ used but never defined
+  212 | static void tile(Monitor *m);
+      |             ^~~~
+dwm.c:213:13: warning: ‘togglebar’ used but never defined
+  213 | static void togglebar(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:213:13: warning: ‘togglebar’ used but never defined
+  213 | static void togglebar(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:214:13: warning: ‘togglefloating’ used but never defined
+  214 | static void togglefloating(const Arg *arg);
+      |             ^~~~~~~~~~~~~~
+dwm.c:214:13: warning: ‘togglefloating’ used but never defined
+  214 | static void togglefloating(const Arg *arg);
+      |             ^~~~~~~~~~~~~~
+dwm.c:215:13: warning: ‘toggletag’ used but never defined
+  215 | static void toggletag(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:215:13: warning: ‘toggletag’ used but never defined
+  215 | static void toggletag(const Arg *arg);
+      |             ^~~~~~~~~
+dwm.c:216:13: warning: ‘toggleview’ used but never defined
+  216 | static void toggleview(const Arg *arg);
+      |             ^~~~~~~~~~
+dwm.c:217:13: warning: ‘unfocus’ used but never defined
+  217 | static void unfocus(Client *c, int setfocus);
+      |             ^~~~~~~
+dwm.c:216:13: warning: ‘toggleview’ used but never defined
+  216 | static void toggleview(const Arg *arg);
+      |             ^~~~~~~~~~
+dwm.c:217:13: warning: ‘unfocus’ used but never defined
+  217 | static void unfocus(Client *c, int setfocus);
+      |             ^~~~~~~
+dwm.c:218:13: warning: ‘unmanage’ used but never defined
+  218 | static void unmanage(Client *c, int destroyed);
+      |             ^~~~~~~~
+dwm.c:218:13: warning: ‘unmanage’ used but never defined
+  218 | static void unmanage(Client *c, int destroyed);
+      |             ^~~~~~~~
+dwm.c:219:13: warning: ‘unmapnotify’ used but never defined
+  219 | static void unmapnotify(XEvent *e);
+      |             ^~~~~~~~~~~
+dwm.c:219:13: warning: ‘unmapnotify’ used but never defined
+  219 | static void unmapnotify(XEvent *e);
+      |             ^~~~~~~~~~~
+dwm.c:220:13: warning: ‘updatebarpos’ used but never defined
+  220 | static void updatebarpos(Monitor *m);
+      |             ^~~~~~~~~~~~
+dwm.c:220:13: warning: ‘updatebarpos’ used but never defined
+  220 | static void updatebarpos(Monitor *m);
+      |             ^~~~~~~~~~~~
+dwm.c:221:13: warning: ‘updatebars’ used but never defined
+  221 | static void updatebars(void);
+      |             ^~~~~~~~~~
+dwm.c:221:13: warning: ‘updatebars’ used but never defined
+  221 | static void updatebars(void);
+      |             ^~~~~~~~~~
+dwm.c:222:13: warning: ‘updateclientlist’ used but never defined
+  222 | static void updateclientlist(void);
+      |             ^~~~~~~~~~~~~~~~
+dwm.c:222:13: warning: ‘updateclientlist’ used but never defined
+  222 | static void updateclientlist(void);
+      |             ^~~~~~~~~~~~~~~~
+dwm.c:223:12: warning: ‘updategeom’ used but never defined
+  223 | static int updategeom(void);
+      |            ^~~~~~~~~~
+dwm.c:223:12: warning: ‘updategeom’ used but never defined
+  223 | static int updategeom(void);
+      |            ^~~~~~~~~~
+dwm.c:224:13: warning: ‘updatenumlockmask’ used but never defined
+  224 | static void updatenumlockmask(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:224:13: warning: ‘updatenumlockmask’ used but never defined
+  224 | static void updatenumlockmask(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:225:13: warning: ‘updatesizehints’ used but never defined
+  225 | static void updatesizehints(Client *c);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:225:13: warning: ‘updatesizehints’ used but never defined
+  225 | static void updatesizehints(Client *c);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:226:13: warning: ‘updatestatus’ used but never defined
+  226 | static void updatestatus(void);
+      |             ^~~~~~~~~~~~
+dwm.c:226:13: warning: ‘updatestatus’ used but never defined
+  226 | static void updatestatus(void);
+      |             ^~~~~~~~~~~~
+dwm.c:227:13: warning: ‘updatetitle’ used but never defined
+  227 | static void updatetitle(Client *c);
+      |             ^~~~~~~~~~~
+dwm.c:227:13: warning: ‘updatetitle’ used but never defined
+  227 | static void updatetitle(Client *c);
+      |             ^~~~~~~~~~~
+dwm.c:228:13: warning: ‘updatewindowtype’ used but never defined
+  228 | static void updatewindowtype(Client *c);
+      |             ^~~~~~~~~~~~~~~~
+dwm.c:228:13: warning: ‘updatewindowtype’ used but never defined
+  228 | static void updatewindowtype(Client *c);
+      |             ^~~~~~~~~~~~~~~~
+dwm.c:229:13: warning: ‘updatewmhints’ used but never defined
+  229 | static void updatewmhints(Client *c);
+      |             ^~~~~~~~~~~~~
+dwm.c:229:13: warning: ‘updatewmhints’ used but never defined
+  229 | static void updatewmhints(Client *c);
+      |             ^~~~~~~~~~~~~
+dwm.c:230:13: warning: ‘view’ used but never defined
+  230 | static void view(const Arg *arg);
+      |             ^~~~
+dwm.c:230:13: warning: ‘view’ used but never defined
+  230 | static void view(const Arg *arg);
+      |             ^~~~
+dwm.c:231:16: warning: ‘wintoclient’ used but never defined
+  231 | static Client *wintoclient(Window w);
+      |                ^~~~~~~~~~~
+dwm.c:231:16: warning: ‘wintoclient’ used but never defined
+  231 | static Client *wintoclient(Window w);
+      |                ^~~~~~~~~~~
+dwm.c:232:17: warning: ‘wintomon’ used but never defined
+  232 | static Monitor *wintomon(Window w);
+      |                 ^~~~~~~~
+dwm.c:232:17: warning: ‘wintomon’ used but never defined
+  232 | static Monitor *wintomon(Window w);
+      |                 ^~~~~~~~
+dwm.c:233:12: warning: ‘xerror’ used but never defined
+  233 | static int xerror(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~
+dwm.c:233:12: warning: ‘xerror’ used but never defined
+  233 | static int xerror(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~
+dwm.c:234:12: warning: ‘xerrordummy’ used but never defined
+  234 | static int xerrordummy(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~~~~~~
+dwm.c:234:12: warning: ‘xerrordummy’ used but never defined
+  234 | static int xerrordummy(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~~~~~~
+dwm.c:235:12: warning: ‘xerrorstart’ used but never defined
+  235 | static int xerrorstart(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~~~~~~
+dwm.c:235:12: warning: ‘xerrorstart’ used but never defined
+  235 | static int xerrorstart(Display *dpy, XErrorEvent *ee);
+      |            ^~~~~~~~~~~
+dwm.c:236:13: warning: ‘zoom’ used but never defined
+  236 | static void zoom(const Arg *arg);
+      |             ^~~~
+dwm.c:236:13: warning: ‘zoom’ used but never defined
+  236 | static void zoom(const Arg *arg);
+      |             ^~~~
+dwm.c:237:13: warning: ‘bstack’ used but never defined
+  237 | static void bstack(Monitor *m);
+      |             ^~~~~~
+dwm.c:237:13: warning: ‘bstack’ used but never defined
+  237 | static void bstack(Monitor *m);
+      |             ^~~~~~
+dwm.c:238:13: warning: ‘bstackhoriz’ used but never defined
+  238 | static void bstackhoriz(Monitor *m);
+      |             ^~~~~~~~~~~
+dwm.c:238:13: warning: ‘bstackhoriz’ used but never defined
+  238 | static void bstackhoriz(Monitor *m);
+      |             ^~~~~~~~~~~
+dwm.c:239:13: warning: ‘centeredmaster’ used but never defined
+  239 | static void centeredmaster(Monitor *m);
+      |             ^~~~~~~~~~~~~~
+dwm.c:239:13: warning: ‘centeredmaster’ used but never defined
+  239 | static void centeredmaster(Monitor *m);
+      |             ^~~~~~~~~~~~~~
+dwm.c:240:13: warning: ‘centeredfloatingmaster’ used but never defined
+  240 | static void centeredfloatingmaster(Monitor *m);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+dwm.c:240:13: warning: ‘centeredfloatingmaster’ used but never defined
+  240 | static void centeredfloatingmaster(Monitor *m);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+dwm.c:241:13: warning: ‘col’ used but never defined
+  241 | static void col(Monitor *m);
+      |             ^~~
+dwm.c:241:13: warning: ‘col’ used but never defined
+  241 | static void col(Monitor *m);
+      |             ^~~
+dwm.c:2356:6: warning: ‘col’ defined but not used [-Wunused-function]
+ 2356 | void col(Monitor *m)
+      |      ^~~
+dwm.c:2356:6: warning: ‘col’ defined but not used [-Wunused-function]
+ 2356 | void col(Monitor *m)
+      |      ^~~
+dwm.c:2309:6: warning: ‘centeredfloatingmaster’ defined but not used [-Wunused-function]
+ 2309 | void centeredfloatingmaster(Monitor *m)
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+dwm.c:2309:6: warning: ‘centeredfloatingmaster’ defined but not used [-Wunused-function]
+ 2309 | void centeredfloatingmaster(Monitor *m)
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+dwm.c:2255:6: warning: ‘centeredmaster’ defined but not used [-Wunused-function]
+ 2255 | void centeredmaster(Monitor *m)
+      |      ^~~~~~~~~~~~~~
+dwm.c:2255:6: warning: ‘centeredmaster’ defined but not used [-Wunused-function]
+ 2255 | void centeredmaster(Monitor *m)
+      |      ^~~~~~~~~~~~~~
+dwm.c:2225:13: warning: ‘bstackhoriz’ defined but not used [-Wunused-function]
+ 2225 | static void bstackhoriz(Monitor *m)
+      |             ^~~~~~~~~~~
+dwm.c:2225:13: warning: ‘bstackhoriz’ defined but not used [-Wunused-function]
+ 2225 | static void bstackhoriz(Monitor *m)
+      |             ^~~~~~~~~~~
+dwm.c:2193:13: warning: ‘bstack’ defined but not used [-Wunused-function]
+ 2193 | static void bstack(Monitor *m)
+      |             ^~~~~~
+dwm.c:2193:13: warning: ‘bstack’ defined but not used [-Wunused-function]
+ 2193 | static void bstack(Monitor *m)
+      |             ^~~~~~
+dwm.c:2170:1: warning: ‘main’ defined but not used [-Wunused-function]
+ 2170 | main(int argc, char *argv[])
+      | ^~~~
+dwm.c:2170:1: warning: ‘main’ defined but not used [-Wunused-function]
+ 2170 | main(int argc, char *argv[])
+      | ^~~~
+dwm.c:2158:1: warning: ‘zoom’ defined but not used [-Wunused-function]
+ 2158 | zoom(const Arg *arg)
+      | ^~~~
+dwm.c:2158:1: warning: ‘zoom’ defined but not used [-Wunused-function]
+ 2158 | zoom(const Arg *arg)
+      | ^~~~
+dwm.c:2151:1: warning: ‘xerrorstart’ defined but not used [-Wunused-function]
+ 2151 | xerrorstart(Display *dpy, XErrorEvent *ee)
+      | ^~~~~~~~~~~
+dwm.c:2151:1: warning: ‘xerrorstart’ defined but not used [-Wunused-function]
+ 2151 | xerrorstart(Display *dpy, XErrorEvent *ee)
+      | ^~~~~~~~~~~
+dwm.c:2143:1: warning: ‘xerrordummy’ defined but not used [-Wunused-function]
+ 2143 | xerrordummy(Display *dpy, XErrorEvent *ee)
+      | ^~~~~~~~~~~
+dwm.c:2143:1: warning: ‘xerrordummy’ defined but not used [-Wunused-function]
+ 2143 | xerrordummy(Display *dpy, XErrorEvent *ee)
+      | ^~~~~~~~~~~
+dwm.c:2125:1: warning: ‘xerror’ defined but not used [-Wunused-function]
+ 2125 | xerror(Display *dpy, XErrorEvent *ee)
+      | ^~~~~~
+dwm.c:2125:1: warning: ‘xerror’ defined but not used [-Wunused-function]
+ 2125 | xerror(Display *dpy, XErrorEvent *ee)
+      | ^~~~~~
+dwm.c:2105:1: warning: ‘wintomon’ defined but not used [-Wunused-function]
+ 2105 | wintomon(Window w)
+      | ^~~~~~~~
+dwm.c:2105:1: warning: ‘wintomon’ defined but not used [-Wunused-function]
+ 2105 | wintomon(Window w)
+      | ^~~~~~~~
+dwm.c:2080:1: warning: ‘view’ defined but not used [-Wunused-function]
+ 2080 | view(const Arg *arg)
+      | ^~~~
+dwm.c:2080:1: warning: ‘view’ defined but not used [-Wunused-function]
+ 2080 | view(const Arg *arg)
+      | ^~~~
+dwm.c:2061:1: warning: ‘updatewmhints’ defined but not used [-Wunused-function]
+ 2061 | updatewmhints(Client *c)
+      | ^~~~~~~~~~~~~
+dwm.c:2061:1: warning: ‘updatewmhints’ defined but not used [-Wunused-function]
+ 2061 | updatewmhints(Client *c)
+      | ^~~~~~~~~~~~~
+dwm.c:2049:1: warning: ‘updatewindowtype’ defined but not used [-Wunused-function]
+ 2049 | updatewindowtype(Client *c)
+      | ^~~~~~~~~~~~~~~~
+dwm.c:2049:1: warning: ‘updatewindowtype’ defined but not used [-Wunused-function]
+ 2049 | updatewindowtype(Client *c)
+      | ^~~~~~~~~~~~~~~~
+dwm.c:2040:1: warning: ‘updatetitle’ defined but not used [-Wunused-function]
+ 2040 | updatetitle(Client *c)
+      | ^~~~~~~~~~~
+dwm.c:2040:1: warning: ‘updatetitle’ defined but not used [-Wunused-function]
+ 2040 | updatetitle(Client *c)
+      | ^~~~~~~~~~~
+dwm.c:2032:1: warning: ‘updatestatus’ defined but not used [-Wunused-function]
+ 2032 | updatestatus(void)
+      | ^~~~~~~~~~~~
+dwm.c:2032:1: warning: ‘updatestatus’ defined but not used [-Wunused-function]
+ 2032 | updatestatus(void)
+      | ^~~~~~~~~~~~
+dwm.c:1988:1: warning: ‘updatesizehints’ defined but not used [-Wunused-function]
+ 1988 | updatesizehints(Client *c)
+      | ^~~~~~~~~~~~~~~
+dwm.c:1988:1: warning: ‘updatesizehints’ defined but not used [-Wunused-function]
+ 1988 | updatesizehints(Client *c)
+      | ^~~~~~~~~~~~~~~
+dwm.c:1972:1: warning: ‘updatenumlockmask’ defined but not used [-Wunused-function]
+ 1972 | updatenumlockmask(void)
+      | ^~~~~~~~~~~~~~~~~
+dwm.c:1972:1: warning: ‘updatenumlockmask’ defined but not used [-Wunused-function]
+ 1972 | updatenumlockmask(void)
+      | ^~~~~~~~~~~~~~~~~
+dwm.c:1894:1: warning: ‘updategeom’ defined but not used [-Wunused-function]
+ 1894 | updategeom(void)
+      | ^~~~~~~~~~
+dwm.c:1894:1: warning: ‘updategeom’ defined but not used [-Wunused-function]
+ 1894 | updategeom(void)
+      | ^~~~~~~~~~
+dwm.c:1880:1: warning: ‘updateclientlist’ defined but not used [-Wunused-function]
+ 1880 | updateclientlist()
+      | ^~~~~~~~~~~~~~~~
+dwm.c:1880:1: warning: ‘updateclientlist’ defined but not used [-Wunused-function]
+ 1880 | updateclientlist()
+      | ^~~~~~~~~~~~~~~~
+dwm.c:1845:1: warning: ‘updatebars’ defined but not used [-Wunused-function]
+ 1845 | updatebars(void)
+      | ^~~~~~~~~~
+dwm.c:1845:1: warning: ‘updatebars’ defined but not used [-Wunused-function]
+ 1845 | updatebars(void)
+      | ^~~~~~~~~~
+dwm.c:1831:1: warning: ‘unmapnotify’ defined but not used [-Wunused-function]
+ 1831 | unmapnotify(XEvent *e)
+      | ^~~~~~~~~~~
+dwm.c:1831:1: warning: ‘unmapnotify’ defined but not used [-Wunused-function]
+ 1831 | unmapnotify(XEvent *e)
+      | ^~~~~~~~~~~
+dwm.c:1792:1: warning: ‘unfocus’ defined but not used [-Wunused-function]
+ 1792 | unfocus(Client *c, int setfocus)
+      | ^~~~~~~
+dwm.c:1792:1: warning: ‘unfocus’ defined but not used [-Wunused-function]
+ 1792 | unfocus(Client *c, int setfocus)
+      | ^~~~~~~
+dwm.c:1780:1: warning: ‘toggleview’ defined but not used [-Wunused-function]
+ 1780 | toggleview(const Arg *arg)
+      | ^~~~~~~~~~
+dwm.c:1780:1: warning: ‘toggleview’ defined but not used [-Wunused-function]
+ 1780 | toggleview(const Arg *arg)
+      | ^~~~~~~~~~
+dwm.c:1765:1: warning: ‘toggletag’ defined but not used [-Wunused-function]
+ 1765 | toggletag(const Arg *arg)
+      | ^~~~~~~~~
+dwm.c:1765:1: warning: ‘toggletag’ defined but not used [-Wunused-function]
+ 1765 | toggletag(const Arg *arg)
+      | ^~~~~~~~~
+dwm.c:1751:1: warning: ‘togglefloating’ defined but not used [-Wunused-function]
+ 1751 | togglefloating(const Arg *arg)
+      | ^~~~~~~~~~~~~~
+dwm.c:1751:1: warning: ‘togglefloating’ defined but not used [-Wunused-function]
+ 1751 | togglefloating(const Arg *arg)
+      | ^~~~~~~~~~~~~~
+dwm.c:1742:1: warning: ‘togglebar’ defined but not used [-Wunused-function]
+ 1742 | togglebar(const Arg *arg)
+      | ^~~~~~~~~
+dwm.c:1742:1: warning: ‘togglebar’ defined but not used [-Wunused-function]
+ 1742 | togglebar(const Arg *arg)
+      | ^~~~~~~~~
+dwm.c:1714:1: warning: ‘tile’ defined but not used [-Wunused-function]
+ 1714 | tile(Monitor *m)
+      | ^~~~
+dwm.c:1714:1: warning: ‘tile’ defined but not used [-Wunused-function]
+ 1714 | tile(Monitor *m)
+      | ^~~~
+dwm.c:1706:1: warning: ‘tagmon’ defined but not used [-Wunused-function]
+ 1706 | tagmon(const Arg *arg)
+      | ^~~~~~
+dwm.c:1706:1: warning: ‘tagmon’ defined but not used [-Wunused-function]
+ 1706 | tagmon(const Arg *arg)
+      | ^~~~~~
+dwm.c:1696:1: warning: ‘tag’ defined but not used [-Wunused-function]
+ 1696 | tag(const Arg *arg)
+      | ^~~
+dwm.c:1696:1: warning: ‘tag’ defined but not used [-Wunused-function]
+ 1696 | tag(const Arg *arg)
+      | ^~~
+dwm.c:1682:1: warning: ‘spawn’ defined but not used [-Wunused-function]
+ 1682 | spawn(const Arg *arg)
+      | ^~~~~
+dwm.c:1682:1: warning: ‘spawn’ defined but not used [-Wunused-function]
+ 1682 | spawn(const Arg *arg)
+      | ^~~~~
+dwm.c:1674:1: warning: ‘sigchld’ defined but not used [-Wunused-function]
+ 1674 | sigchld(int unused)
+      | ^~~~~~~
+dwm.c:1674:1: warning: ‘sigchld’ defined but not used [-Wunused-function]
+ 1674 | sigchld(int unused)
+      | ^~~~~~~
+dwm.c:1656:1: warning: ‘showhide’ defined but not used [-Wunused-function]
+ 1656 | showhide(Client *c)
+      | ^~~~~~~~
+dwm.c:1656:1: warning: ‘showhide’ defined but not used [-Wunused-function]
+ 1656 | showhide(Client *c)
+      | ^~~~~~~~
+dwm.c:1643:1: warning: ‘seturgent’ defined but not used [-Wunused-function]
+ 1643 | seturgent(Client *c, int urg)
+      | ^~~~~~~~~
+dwm.c:1643:1: warning: ‘seturgent’ defined but not used [-Wunused-function]
+ 1643 | seturgent(Client *c, int urg)
+      | ^~~~~~~~~
+dwm.c:1557:1: warning: ‘setmfact’ defined but not used [-Wunused-function]
+ 1557 | setmfact(const Arg *arg)
+      | ^~~~~~~~
+dwm.c:1557:1: warning: ‘setmfact’ defined but not used [-Wunused-function]
+ 1557 | setmfact(const Arg *arg)
+      | ^~~~~~~~
+dwm.c:1542:1: warning: ‘setlayout’ defined but not used [-Wunused-function]
+ 1542 | setlayout(const Arg *arg)
+      | ^~~~~~~~~
+dwm.c:1542:1: warning: ‘setlayout’ defined but not used [-Wunused-function]
+ 1542 | setlayout(const Arg *arg)
+      | ^~~~~~~~~
+dwm.c:1502:1: warning: ‘setfocus’ defined but not used [-Wunused-function]
+ 1502 | setfocus(Client *c)
+      | ^~~~~~~~
+dwm.c:1502:1: warning: ‘setfocus’ defined but not used [-Wunused-function]
+ 1502 | setfocus(Client *c)
+      | ^~~~~~~~
+dwm.c:1389:1: warning: ‘restack’ defined but not used [-Wunused-function]
+ 1389 | restack(Monitor *m)
+      | ^~~~~~~
+dwm.c:1389:1: warning: ‘restack’ defined but not used [-Wunused-function]
+ 1389 | restack(Monitor *m)
+      | ^~~~~~~
+make: *** [Makefile:18: dwm.o] Error 1
+make: *** [Makefile:18: dwm.o] Error 1

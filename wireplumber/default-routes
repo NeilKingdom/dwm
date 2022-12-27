@@ -1,5 +1,0 @@
-[default-routes]
-bluez_card.28_11_A5_44_BE_B0:output:headphone-output:channelMap=FL;FR;
-bluez_card.28_11_A5_44_BE_B0:output:headphone-output:channelVolumes=0.061023745685816;0.061023745685816;
-bluez_card.28_11_A5_44_BE_B0:output:headphone-output:latencyOffsetNsec=0
-bluez_card.28_11_A5_44_BE_B0:profile:a2dp-sink-aac=headphone-output;
