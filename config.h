@@ -64,6 +64,8 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
    { "TTT",      bstack },
    { "===",      bstackhoriz },
+   { "|M|",      centeredmaster },
+   { ">M>",      centeredfloatingmaster },
 };
 
 /*** Extra key definitions ***/
@@ -103,11 +105,15 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,       zoom,             { 0 }},                 /* Swap active window with master */
 	{ MODKEY,                       XK_Tab,         view,             { 0 }},
 	{ MODKEY,                       XK_q,           killclient,       { 0 }},                 /* Kill active window */
+   /* Layouts */
 	{ MODKEY,                       XK_t,           setlayout,        { .v = &layouts[0] }},  /* Tiling */
 	{ MODKEY,                       XK_f,           setlayout,        { .v = &layouts[1] }},  /* Floating */
 	{ MODKEY,                       XK_m,           setlayout,        { .v = &layouts[2] }},  /* Monicle */
    { MODKEY,                       XK_u,           setlayout,        { .v = &layouts[3] }},  /* Bottom stack (vertical) */
-   { MODKEY,                       XK_o,           setlayout,        { .v = &layouts[4] }},  /* Bottom stack (horizontal) */
+   { MODKEY,                       XK_i,           setlayout,        { .v = &layouts[4] }},  /* Bottom stack (horizontal) */
+   { MODKEY,                       XK_o,           setlayout,        { .v = &layouts[5] }},  /* Centered master */
+   { MODKEY,                       XK_p,           setlayout,        { .v = &layouts[6] }},  /* Centered floating master */
+   /* Layouts end */
 	{ MODKEY|ShiftMask,             XK_Return,      setlayout,        { 0 }},
 	{ MODKEY|ShiftMask,             XK_f,           togglefloating,   { 0 }},                 /* Reset floating windows */
 	{ MODKEY,                       XK_0,           view,             { .ui = ~0 }},          /* Display all tags at once */
