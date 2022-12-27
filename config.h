@@ -11,6 +11,8 @@ static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders *
 static const unsigned int snap      = 32; /* Pixel spacing for floating windows to snap */
 static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
 static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
+static const int vertpad            = 5;  /* Vertical padding of bar */
+static const int sidepad            = 5;  /* Horizontal padding of bar */
 
 /* Fonts for bar. Additional fonts are used as fallbacks */
 static const char *fonts[]          = {
