@@ -14,10 +14,10 @@ static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = ba
 
 /* Fonts for bar. Additional fonts are used as fallbacks */
 static const char *fonts[]          = {
-   "Terminus:pixelsize=14",
-   "NotoColorEmoji:pixelsize=14:antialias=true:autohint=true"
+   "Terminus:pixelsize=32",
+   "NotoColorEmoji:pixelsize=32:antialias=true:autohint=true"
 };
-static const char dmenufont[]       = "Terminus:pixelsize=14";
+static const char dmenufont[]       = "Terminus:pixelsize=32";
 
 /* Color pallet */
 static const char col_gray1[]       = "#222222";
@@ -80,7 +80,7 @@ static char dmenumon[2] = "0"; /* Component of dmenucmd, manipulated in spawn() 
    All subsequent strings are a comma-separated list of
    options that can be applied to the initial command.
 */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 
