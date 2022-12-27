@@ -8,6 +8,7 @@
 /*** Appearance ***/
 
 static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders */
+static const unsigned int gappx     = 5;  /* Gaps between windows */
 static const unsigned int snap      = 30; /* Pixel spacing for floating windows to snap */
 static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
 static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
@@ -89,7 +90,8 @@ static const Layout layouts[] = {
    All subsequent strings are a comma-separated list of
    options that can be applied to the initial command.
 */
-static const char *dmenucmd[]   = { "dmenu_run", "-fn", "Terminus:pixelsize=32:style=bold:antialias=true:autohint=true", "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
+static char dmenumon[2] = "0"; /* Used in dwm.c and dmenucmd below to select which monitor dmenu should appear on */
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", "Terminus:pixelsize=32:style=bold:antialias=true:autohint=true", "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 
@@ -131,6 +133,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period,      focusmon,         { .i = +1 }},           /* Switch active monitor to the right */
 	{ MODKEY|ShiftMask,             XK_comma,       tagmon,           { .i = -1 }},
 	{ MODKEY|ShiftMask,             XK_period,      tagmon,           { .i = +1 }},
+   { MODKEY|ShiftMask,             XK_equal,       setgaps,          { .i = -5 }},           /* Decrease gaps */
+   { MODKEY,                       XK_equal,       setgaps,          { .i = 0 }},            /* Reset gaps */
+   { MODKEY,                       XK_minus,       setgaps,          { .i = +5 }},           /* Increase gaps */
    /* Switch between tags */
 	  TAGKEYS(                      XK_1,                             0)
 	  TAGKEYS(                      XK_2,                             1)

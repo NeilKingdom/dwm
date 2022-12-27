@@ -8,18 +8,22 @@
 /*** Appearance ***/
 
 static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders */
-static const unsigned int snap      = 32; /* Pixel spacing for floating windows to snap */
+static const unsigned int gappx     = 5;  /* Gaps between windows */
+static const unsigned int snap      = 30; /* Pixel spacing for floating windows to snap */
 static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
 static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
 static const int vertpad            = 5;  /* Vertical padding of bar */
 static const int sidepad            = 5;  /* Horizontal padding of bar */
 
-/* Fonts for bar. Additional fonts are used as fallbacks */
-static const char *fonts[]          = {
-   "Terminus:pixelsize=32",
+/*
+   Fonts for bar.
+   Additional fonts are used as fallbacks.
+   Check man fonts-conf(1) to see attributes.
+*/
+static const char *fonts[] = {
+   "Terminus:pixelsize=32:style=bold:antialias=true:autohint=true",
    "NotoColorEmoji:pixelsize=32:antialias=true:autohint=true"
 };
-static const char dmenufont[]       = "Terminus:pixelsize=32";
 
 /* Color pallet */
 static const char col_gray1[]       = "#222222";
@@ -31,7 +35,7 @@ static const char col_purple[]      = "#9544FF";
 
 /* Color schemes */
 static const char *colors[][4]      = {
-	/*               FG         BG          Border      Float     */
+/*                  FG         BG          Border      Float     */
 	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2,  col_gray2 },
 	[SchemeSel]  = { col_gray4, col_purple, col_purple, col_cyan  },
 };
@@ -52,7 +56,7 @@ static const Rule rules[] = {
 
 /*** Layout(s) ***/
 
-static const float mfact        = 0.5f; /* Master:Slave vertical split ratio */
+static const float mfact        = 0.5f; /* Default master:slave vertical split ratio */
 static const int nmaster        = 1;    /* Default number of windows in master area */
 static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
@@ -74,38 +78,43 @@ static const Layout layouts[] = {
 
 #define MODKEY Mod4Mask /* Mod4Mask = Super key */
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           { .ui = (1 << TAG) }}, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     { .ui = (1 << TAG) }}, \
-	{ MODKEY|ShiftMask,             KEY,      tag,            { .ui = (1 << TAG) }}, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      { .ui = (1 << TAG) }},
+	{ MODKEY,                           KEY,      view,           { .ui = (1 << TAG) }}, \
+	{ MODKEY|ControlMask,               KEY,      toggleview,     { .ui = (1 << TAG) }}, \
+	{ MODKEY|ShiftMask,                 KEY,      tag,            { .ui = (1 << TAG) }}, \
+	{ MODKEY|ControlMask|ShiftMask,     KEY,      toggletag,      { .ui = (1 << TAG) }},
 
 /*** Commands ***/
-
-static char dmenumon[2] = "0"; /* Component of dmenucmd, manipulated in spawn() */
 
 /*
    The initial string in the list is the command to run.
    All subsequent strings are a comma-separated list of
    options that can be applied to the initial command.
 */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
+static char dmenumon[2] = "0"; /* Used in dwm.c and dmenucmd below to select which monitor dmenu should appear on */
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", "Terminus:pixelsize=32:style=bold:antialias=true:autohint=true", "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 
+/*
+   .v = Vector (array/string)
+   .i = Integer
+   .ui = Unsigned Integer
+   .f = Float
+*/
 static const Key keys[] = {
 	/* Modifier                     Key             Function          Argument */
-   { MODKEY,                       XK_w,           spawn,            { .v = firefoxcmd }},
+   { MODKEY,                       XK_w,           spawn,            { .v = firefoxcmd }},   /* Run firefox */
 	{ MODKEY,                       XK_d,           spawn,            { .v = dmenucmd }},     /* Run dmenu */
 	{ MODKEY,                       XK_Return,      spawn,            { .v = termcmd }},      /* Spawn new ST instance */
 	{ MODKEY,                       XK_b,           togglebar,        { 0 }},                 /* Toggle bar */
-	{ MODKEY,                       XK_j,           focusstack,       {.i = +1 }},            /* Cycle to next window in the stack */
-	{ MODKEY,                       XK_k,           focusstack,       {.i = -1 }},            /* Cycle to the previous window in the stack */
-	{ MODKEY,                       XK_a,           incnmaster,       {.i = +1 }},            /* Promote next slave window to master */
-	{ MODKEY,                       XK_s,           incnmaster,       {.i = -1 }},            /* Demote most recent master to a slave */
-	{ MODKEY,                       XK_h,           setmfact,         {.f = -0.05 }},         /* Move vertical split left */
-	{ MODKEY,                       XK_l,           setmfact,         {.f = +0.05 }},         /* Move vertical split right */
+	{ MODKEY,                       XK_j,           focusstack,       { .i = +1 }},           /* Cycle to next window in the stack */
+	{ MODKEY,                       XK_k,           focusstack,       { .i = -1 }},           /* Cycle to the previous window in the stack */
+	{ MODKEY,                       XK_a,           incnmaster,       { .i = +1 }},           /* Add another master window */
+	{ MODKEY,                       XK_s,           incnmaster,       { .i = -1 }},           /* Subtract/demote most recent master to a slave */
+	{ MODKEY,                       XK_h,           setmfact,         { .f = -0.05f }},       /* Move vertical split left */
+	{ MODKEY,                       XK_l,           setmfact,         { .f = +0.05f }},       /* Move vertical split right */
 	{ MODKEY,                       XK_space,       zoom,             { 0 }},                 /* Swap active window with master */
-	{ MODKEY,                       XK_Tab,         view,             { 0 }},
+	{ MODKEY,                       XK_Tab,         view,             { 0 }},                 /* Cycle between current tag and previously selected tag */
 	{ MODKEY,                       XK_q,           killclient,       { 0 }},                 /* Kill active window */
    /* Layouts */
 	{ MODKEY,                       XK_t,           setlayout,        { .v = &layouts[0] }},  /* Tiling */
@@ -117,14 +126,16 @@ static const Key keys[] = {
    { MODKEY,                       XK_p,           setlayout,        { .v = &layouts[6] }},  /* Centered floating master */
    { MODKEY,                       XK_c,           setlayout,        { .v = &layouts[7] }},  /* Columns */
    /* Layouts end */
-	{ MODKEY|ShiftMask,             XK_Return,      setlayout,        { 0 }},
 	{ MODKEY|ShiftMask,             XK_f,           togglefloating,   { 0 }},                 /* Snap a floating window back to its position according to the current layout */
 	{ MODKEY,                       XK_0,           view,             { .ui = ~0 }},          /* Display all tags at once */
-	{ MODKEY|ShiftMask,             XK_0,           tag,              { .ui = ~0 }},
+	{ MODKEY|ShiftMask,             XK_0,           tag,              { .ui = ~0 }},          /* Duplicate active window handle to all tags */
 	{ MODKEY,                       XK_comma,       focusmon,         { .i = -1 }},           /* Switch active monitor to the left */
 	{ MODKEY,                       XK_period,      focusmon,         { .i = +1 }},           /* Switch active monitor to the right */
 	{ MODKEY|ShiftMask,             XK_comma,       tagmon,           { .i = -1 }},
 	{ MODKEY|ShiftMask,             XK_period,      tagmon,           { .i = +1 }},
+   { MODKEY|ShiftMask,             XK_equal,       setgaps,          { .i = -5 }},           /* Decrease gaps */
+   { MODKEY,                       XK_equal,       setgaps,          { .i = 0 }},            /* Reset gaps */
+   { MODKEY,                       XK_minus,       setgaps,          { .i = +5 }},           /* Increase gaps */
    /* Switch between tags */
 	  TAGKEYS(                      XK_1,                             0)
 	  TAGKEYS(                      XK_2,                             1)
@@ -135,7 +146,7 @@ static const Key keys[] = {
 	  TAGKEYS(                      XK_7,                             6)
 	  TAGKEYS(                      XK_8,                             7)
 	  TAGKEYS(                      XK_9,                             8)
-	{ MODKEY|ShiftMask,             XK_q,           quit,             {0}},                   /* Kill DWM */
+	{ MODKEY|ShiftMask,             XK_q,           quit,             { 0 }},                   /* Kill DWM */
 };
 
 /*** Button events ***/
