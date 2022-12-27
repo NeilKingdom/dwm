@@ -72,6 +72,7 @@ static const Layout layouts[] = {
    { "|M|",      centeredmaster },
    { ">M>",      centeredfloatingmaster },
    { "|||",      col },
+   { "HHH",      grid },
 };
 
 /*** Extra key definitions ***/
@@ -125,6 +126,7 @@ static const Key keys[] = {
    { MODKEY,                       XK_o,           setlayout,        { .v = &layouts[5] }},  /* Centered master */
    { MODKEY,                       XK_p,           setlayout,        { .v = &layouts[6] }},  /* Centered floating master */
    { MODKEY,                       XK_c,           setlayout,        { .v = &layouts[7] }},  /* Columns */
+   { MODKEY,                       XK_g,           setlayout,        { .v = &layouts[8] }},  /* Grid */
    /* Layouts end */
 	{ MODKEY|ShiftMask,             XK_f,           togglefloating,   { 0 }},                 /* Snap a floating window back to its position according to the current layout */
 	{ MODKEY,                       XK_0,           view,             { .ui = ~0 }},          /* Display all tags at once */
