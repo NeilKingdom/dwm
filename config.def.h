@@ -66,6 +66,7 @@ static const Layout layouts[] = {
    { "===",      bstackhoriz },
    { "|M|",      centeredmaster },
    { ">M>",      centeredfloatingmaster },
+   { "|||",      col },
 };
 
 /*** Extra key definitions ***/
@@ -113,6 +114,7 @@ static const Key keys[] = {
    { MODKEY,                       XK_i,           setlayout,        { .v = &layouts[4] }},  /* Bottom stack (horizontal) */
    { MODKEY,                       XK_o,           setlayout,        { .v = &layouts[5] }},  /* Centered master */
    { MODKEY,                       XK_p,           setlayout,        { .v = &layouts[6] }},  /* Centered floating master */
+   { MODKEY,                       XK_c,           setlayout,        { .v = &layouts[7] }},  /* Columns */
    /* Layouts end */
 	{ MODKEY|ShiftMask,             XK_Return,      setlayout,        { 0 }},
 	{ MODKEY|ShiftMask,             XK_f,           togglefloating,   { 0 }},                 /* Reset floating windows */
