@@ -26,13 +26,14 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#BBBBBB";
 static const char col_gray4[]       = "#EEEEEE";
+static const char col_cyan[]        = "#005577";
 static const char col_purple[]      = "#9544FF";
 
 /* Color schemes */
-static const char *colors[][3]      = {
-	/*               FG         BG          Border     */
-	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2  },
-	[SchemeSel]  = { col_gray4, col_purple, col_purple },
+static const char *colors[][4]      = {
+	/*               FG         BG          Border      Float     */
+	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2,  col_gray2 },
+	[SchemeSel]  = { col_gray4, col_purple, col_purple, col_cyan  },
 };
 
 /* Tag symbols */
@@ -117,7 +118,7 @@ static const Key keys[] = {
    { MODKEY,                       XK_c,           setlayout,        { .v = &layouts[7] }},  /* Columns */
    /* Layouts end */
 	{ MODKEY|ShiftMask,             XK_Return,      setlayout,        { 0 }},
-	{ MODKEY|ShiftMask,             XK_f,           togglefloating,   { 0 }},                 /* Reset floating windows */
+	{ MODKEY|ShiftMask,             XK_f,           togglefloating,   { 0 }},                 /* Snap a floating window back to its position according to the current layout */
 	{ MODKEY,                       XK_0,           view,             { .ui = ~0 }},          /* Display all tags at once */
 	{ MODKEY|ShiftMask,             XK_0,           tag,              { .ui = ~0 }},
 	{ MODKEY,                       XK_comma,       focusmon,         { .i = -1 }},           /* Switch active monitor to the left */
