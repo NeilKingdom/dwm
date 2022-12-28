@@ -1,5 +1,7 @@
 #include "mpdcontrol.c"
 
+#define SESSION_FILE "/tmp/dwm-session"
+
 /*
    The default configuration file for DWM.
    Patches from suckless.org will be applied to this file.
@@ -157,7 +159,8 @@ static const Key keys[] = {
 	  TAGKEYS(                      XK_7,                                6)
 	  TAGKEYS(                      XK_8,                                7)
 	  TAGKEYS(                      XK_9,                                8)
-	{ MODKEY|ShiftMask,             XK_q,              quit,             { 0 }},                   /* Kill DWM */
+	{ MODKEY|ControlMask,           XK_q,              quit,             { 0 }},                   /* Kill DWM */
+	{ MODKEY|ShiftMask,             XK_q,              quit,             { 1 }},                   /* Restart DWM */
 };
 
 /*** Button events ***/
