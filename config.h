@@ -12,6 +12,7 @@
 static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders */
 static const unsigned int gappx     = 5;  /* Gaps between windows */
 static const unsigned int snap      = 30; /* Pixel spacing for floating windows to snap */
+static const int nmaxmaster         = 3;  /* Maximum number of windows allowed in master area */
 static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
 static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
 static const int vertpad            = 5;  /* Vertical padding of bar */
