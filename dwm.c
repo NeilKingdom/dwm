@@ -72,6 +72,7 @@ typedef union {
 	int i;
 	unsigned int ui;
 	float f;
+   float sf;
 	const void *v;
 } Arg;
 
@@ -116,6 +117,7 @@ typedef struct {
 struct Monitor {
 	char ltsymbol[16];
 	float mfact;
+   float smfact;
 	int nmaster;
 	int num;
 	int by;               /* Bar geometry */
@@ -206,6 +208,7 @@ static void setfullscreen(Client *c, int fullscreen);
 static void setgaps(const Arg *arg);
 static void setlayout(const Arg *arg);
 static void setmfact(const Arg *arg);
+static void setsmfact(const Arg *arg);
 static void setup(void);
 static void seturgent(Client *c, int urg);
 static void showhide(Client *c);
@@ -655,6 +658,7 @@ createmon(void)
 	m = ecalloc(1, sizeof(Monitor));
 	m->tagset[0] = m->tagset[1] = 1;
 	m->mfact = mfact;
+   m->smfact = smfact;
 	m->nmaster = nmaster;
 	m->showbar = showbar;
 	m->topbar = topbar;
@@ -1624,6 +1628,19 @@ setmfact(const Arg *arg)
 	arrange(selmon);
 }
 
+void setsmfact(const Arg *arg)
+{
+   float sf;
+
+   if (!arg || !selmon->lt[selmon->sellt]->arrange)
+      return;
+   sf = arg->sf < 1.0f ? arg->sf + selmon->smfact : arg->sf - 1.0f;
+   if (sf < 0.0f || sf > 0.9f)
+      return;
+   selmon->smfact = sf;
+   arrange(selmon);
+}
+
 void
 setup(void)
 {
@@ -1784,7 +1801,7 @@ tagmon(const Arg *arg)
 
 void tile(Monitor *m)
 {
-	unsigned int i, n, h, mw, my, ty;
+	unsigned int i, n, h, smh, mw, my, ty;
 	Client *c;
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
@@ -1801,11 +1818,41 @@ void tile(Monitor *m)
          resize(c, m->wx + m->gappx, m->wy + my, mw - (2*c->bw) - m->gappx, h - (2*c->bw), 0);
          if (my + HEIGHT(c) + m->gappx < m->wh)
             my += HEIGHT(c) + m->gappx;
-		} else {
-         h = (m->wh - ty) / (n - i) - m->gappx;
-         resize(c, m->wx + mw + m->gappx, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappx, h - (2*c->bw), 0);
-         if (ty + HEIGHT(c) + m->gappx < m->wh)
-            ty += HEIGHT(c) + m->gappx;
+		}
+      else
+      {
+         smh = m->mh * m->smfact;
+			if (!(nexttiled(c->next)))
+				h = (m->wh - ty) / (n - i) - m->gappx;
+			else
+				h = (m->wh - smh - ty) / (n - i) - gappx;
+
+			if (h < minwsz)
+         {
+				c->isfloating = 1;
+				XRaiseWindow(dpy, c->win);
+				resize(c, m->mx + (m->mw / 2 - WIDTH(c) / 2) + m->gappx, m->my + (m->mh / 2 - HEIGHT(c) / 2), m->ww - mw - (2*c->bw) - 2*m->gappx, h - (2*c->bw), 0);
+				ty -= HEIGHT(c);
+			}
+			else
+         {
+				resize(c, m->wx + mw + m->gappx, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappx, h - (2*c->bw), 0);
+         }
+
+			if (!(nexttiled(c->next)))
+         {
+            if (ty + HEIGHT(c) + smh + m->gappx < m->mh)
+            {
+				   ty += HEIGHT(c) + smh + m->gappx;
+            }
+         }
+			else
+         {
+            if (ty + HEIGHT(c) + m->gappx < m->mh)
+            {
+				   ty += HEIGHT(c) + m->gappx;
+            }
+         }
 		}
 }
 

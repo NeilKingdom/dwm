@@ -14,6 +14,7 @@
 static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders */
 static const unsigned int gappx     = 5;  /* Gaps between windows */
 static const unsigned int snap      = 30; /* Pixel spacing for floating windows to snap */
+static const unsigned int minwsz    = 20; /* Minimum height of a client for smfact */
 static const int nmaxmaster         = 3;  /* Maximum number of windows allowed in master area */
 static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
 static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
@@ -64,6 +65,7 @@ static const Rule rules[] = {
 /*** Layout(s) ***/
 
 static const float mfact        = 0.5f; /* Default master:slave vertical split ratio */
+static const float smfact       = 0.0f; /* Default slave:slave horizontal split ratio (0 is centered) */
 static const int nmaster        = 1;    /* Default number of windows in master area */
 static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
@@ -121,6 +123,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_s,              incnmaster,       { .i = -1 }},           /* Subtract/demote most recent master to a slave */
 	{ MODKEY,                       XK_h,              setmfact,         { .f = -0.05f }},       /* Move vertical split left */
 	{ MODKEY,                       XK_l,              setmfact,         { .f = +0.05f }},       /* Move vertical split right */
+	{ MODKEY|ShiftMask,             XK_k,              setsmfact,        { .f = +0.05f }},       /* Move horizontal split up */
+	{ MODKEY|ShiftMask,             XK_j,              setsmfact,        { .f = -0.05f }},       /* Move horizontal split down */
 	{ MODKEY,                       XK_space,          zoom,             { 0 }},                 /* Swap active window with master */
 	{ MODKEY,                       XK_Tab,            view,             { 0 }},                 /* Cycle between current tag and previously selected tag */
 	{ MODKEY,                       XK_q,              killclient,       { 0 }},                 /* Kill active window */
