@@ -65,7 +65,7 @@ static const Rule rules[] = {
 /*** Layout(s) ***/
 
 static const float mfact        = 0.5f; /* Default master:slave vertical split ratio */
-static const float smfact       = 0.5f; /* Default slave:slave horizontal split ratio */
+static const float smfact       = 0.0f; /* Default slave:slave horizontal split ratio (0 is centered) */
 static const int nmaster        = 1;    /* Default number of windows in master area */
 static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
