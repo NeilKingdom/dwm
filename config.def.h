@@ -15,6 +15,7 @@ static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders *
 static const unsigned int gappx     = 5;  /* Gaps between windows */
 static const unsigned int snap      = 30; /* Pixel spacing for floating windows to snap */
 static const unsigned int minwsz    = 20; /* Minimum height of a client for smfact */
+static const int swallowfloating    = 0;  /* 1 means swallow floating windows by default */
 static const int nmaxmaster         = 3;  /* Maximum number of windows allowed in master area */
 static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
 static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
@@ -57,9 +58,11 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 	WM_NAME(STRING) = Title
 */
 static const Rule rules[] = {
-	/* Class      Instance    Title       Tags Mask     IsFloating   Monitor */
-	{ "Gimp",     NULL,       NULL,       0,            0,           -1      },
-	{ "Firefox",  NULL,       NULL,       (1 << 8),     0,           -1      },
+	/* Class      Instance    Title           Tags Mask     IsFloating   IsTerminal   NoSwallow   Monitor */
+	{ "Gimp",     NULL,       NULL,           0,            1,           0,           0,          -1      },
+	{ "Firefox",  NULL,       NULL,           (1 << 8),     0,           0,           0,          -1      },
+   { "st",       NULL,       NULL,           0,            0,           1,           0,          -1      },
+   { NULL,       NULL,       "Event Tester", 0,            0,           0,           1,          -1      }, /* xev */
 };
 
 /*** Layout(s) ***/
@@ -184,6 +187,12 @@ static const Key keys[] = {
    Button 1 = Left click
    Button 2 = Scroll wheel
    Button 3 = Right click
+   Button 4 = Scroll up
+   Button 5 = Scroll down
+   Button 6 = Scroll left
+   Button 7 = Scroll right
+   Button 8 = Back button
+   Button 9 = Forwards button
 */
 static const Button buttons[] = {
 	/* Click                Event Mask      Button          Function        Argument */
