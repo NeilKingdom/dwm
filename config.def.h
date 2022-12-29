@@ -49,6 +49,8 @@ static const char *colors[][4] = {
 
 /* Tag symbols */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tagsalt[] = { "9", "8", "7", "6", "5", "4", "3", "2", "1" };
+static const int momentaryalttags = 0; /* Set to 1 to only show alt tags when key is held down */
 
 /*
    Rules for specific applications
@@ -166,8 +168,9 @@ static const Key keys[] = {
 	  TAGKEYS(                      XK_7,                                6)
 	  TAGKEYS(                      XK_8,                                7)
 	  TAGKEYS(                      XK_9,                                8)
-	{ MODKEY|ControlMask,           XK_q,              quit,             { 0 }},                   /* Kill DWM */
-	{ MODKEY|ShiftMask,             XK_q,              quit,             { 1 }},                   /* Restart DWM */
+   { MODKEY|ShiftMask,             XK_a,              togglealttag,     { 0 }},                 /* Toggle between normal tags and alternative tags */
+	{ MODKEY|ControlMask,           XK_q,              quit,             { 0 }},                 /* Kill DWM */
+	{ MODKEY|ShiftMask,             XK_q,              quit,             { 1 }},                 /* Restart DWM */
 };
 
 /*** Button events ***/
