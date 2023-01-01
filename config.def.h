@@ -1,6 +1,6 @@
 #include "mpdcontrol.c"
 
-#define SESSION_FILE "/tmp/dwm-session"
+#define SESSION_FILE "/tmp/dwm-session" /* Used to save DWM session after reboot */
 
 /*
    The default configuration file for DWM.
@@ -11,25 +11,27 @@
 
 /*** Appearance ***/
 
-static const unsigned int borderpx  = 5;  /* Pixel thickness of window borders */
-static const unsigned int gappx     = 5;  /* Gaps between windows */
-static const unsigned int snap      = 30; /* Pixel spacing for floating windows to snap */
-static const unsigned int minwsz    = 20; /* Minimum height of a client for smfact */
-static const int swallowfloating    = 0;  /* 1 means swallow floating windows by default */
-static const int nmaxmaster         = 3;  /* Maximum number of windows allowed in master area */
-static const int showbar            = 1;  /* 0 = don't show bar, 1 = show bar */
-static const int topbar             = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
-static const int vertpad            = 5;  /* Vertical padding of bar */
-static const int sidepad            = 5;  /* Horizontal padding of bar */
+static const unsigned int borderpx = 5;  /* Pixel thickness of window borders */
+static const unsigned int gappx    = 5;  /* Gaps between windows */
+static const unsigned int snap     = 30; /* Pixel spacing for floating windows to snap */
+static const unsigned int minwsz   = 20; /* Minimum height of a client for smfact */
+static const int swallowfloating   = 0;  /* 1 means swallow floating windows by default */
+static const int nmaxmaster        = 3;  /* Maximum number of windows allowed in master area */
+static const int showbar           = 1;  /* 0 = don't show bar, 1 = show bar */
+static const int topbar            = 1;  /* 0 = bar on bottom of screen, 1 = bar on top of screen */
+static const int vertpad           = 5;  /* Vertical padding of bar */
+static const int sidepad           = 5;  /* Horizontal padding of bar */
 
 /*
-   Fonts for bar.
+   Fonts for bar (these are overriden by dmenu).
    Additional fonts are used as fallbacks.
    Check man fonts-conf(1) to see attributes.
+   See my ST config.def.h for more info on the
+   specific fonts that were chosen.
 */
-static const char *fonts[] = {
-   "Terminus:pixelsize=32:style=bold:antialias=true:autohint=true",
-   "NotoColorEmoji:pixelsize=32:antialias=true:autohint=true"
+static const char *fonts[2] = {
+   "Terminus:style=Bold:size=14:antialias=true",
+   "JoyPixels:style=Regular:pixelsize=14"
 };
 
 /* Color pallet */
