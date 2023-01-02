@@ -31,7 +31,7 @@ static const int sidepad           = 5;  /* Horizontal padding of bar */
 */
 static const char *fonts[2] = {
    "Terminus:style=Bold:size=14:antialias=true",
-   "JoyPixels:style=Regular:pixelsize=14"
+   "Noto Color Emoji:style=Regular:pixelsize=14"
 };
 
 /* Color pallet */
