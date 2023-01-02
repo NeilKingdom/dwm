@@ -157,7 +157,6 @@ static const Key keys[] = {
    { MODKEY,                       XK_equal,          setgaps,          { .i = 0 }},            /* Reset gaps */
    { MODKEY,                       XK_minus,          setgaps,          { .i = +5 }},           /* Increase gaps */
    { MODKEY,                       XK_bracketleft,    mpdchange,        { .i = -1 }},           /* Go to previous song */
-   { MODKEY,                       XK_bracketleft,    mpdchange,        { .i = -1 }},           /* Go to previous song */
    { MODKEY|ShiftMask,             XK_bracketright,   mpdchange,        { .i = +1 }},           /* Go to next song */
    { MODKEY,                       XK_bracketright,   mpdcontrol,       { 0 }},                 /* Stop song */
    /* Switch between tags */
