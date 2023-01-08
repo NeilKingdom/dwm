@@ -46,12 +46,12 @@ static const char col_purple[] = "#9544FF";
 static const char *colors[][4] = {
 /*                  FG         BG          Border      Float     */
 	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2,  col_gray2 },
-	[SchemeSel]  = { col_gray4, col_purple, col_purple, col_cyan  },
+	[SchemeSel]  = { col_gray4, col_gray1,  col_purple, col_cyan  },
 };
 
 /* Tag symbols */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-static const char *tagsalt[] = { "9", "8", "7", "6", "5", "4", "3", "2", "1" };
+static const char *tagsalt[] = { "🌐", "📱", "📨", "📑", "", "", "", "", "🗑️" };
 static const int momentaryalttags = 0; /* Set to 1 to only show alt tags when key is held down */
 
 /*
