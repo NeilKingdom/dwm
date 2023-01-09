@@ -11,7 +11,7 @@
 
 /*** Appearance ***/
 
-static const unsigned int borderpx = 5;  /* Pixel thickness of window borders */
+static const unsigned int borderpx = 7;  /* Pixel thickness of window borders */
 static const unsigned int gappx    = 5;  /* Gaps between windows */
 static const unsigned int snap     = 30; /* Pixel spacing for floating windows to snap */
 static const unsigned int minwsz   = 20; /* Minimum height of a client for smfact */
@@ -34,19 +34,38 @@ static const char *fonts[2] = {
    "Noto Color Emoji:style=Regular:pixelsize=14"
 };
 
-/* Color pallet */
-static const char col_gray1[]  = "#222222";
-static const char col_gray2[]  = "#444444";
-static const char col_gray3[]  = "#BBBBBB";
-static const char col_gray4[]  = "#EEEEEE";
-static const char col_cyan[]   = "#005577";
-static const char col_purple[] = "#9544FF";
+/* The font used for the dmenu cmd shortcut later in this config */
+static const char dmenucmd_font[] = "Terminus:style=Bold:size=14:antialias=true";
+
+/* Color pallet (Gruvbox colors) */
+static const char col_black1[]   = "#1d2021";
+static const char col_red1[]     = "#cc241d";
+static const char col_yellow1[]  = "#98971a";
+static const char col_green1[]   = "#d79921";
+static const char col_blue1[]    = "#458588";
+static const char col_cyan1[]    = "#b16286";
+static const char col_violet1[]  = "#689d6a";
+static const char col_white1[]   = "#a89984";
+static const char col_black2[]   = "#928374";
+static const char col_red2[]     = "#fb4934";
+static const char col_yellow2[]  = "#b8bb26";
+static const char col_green2[]   = "#fabd2f";
+static const char col_blue2[]    = "#83a598";
+static const char col_cyan2[]    = "#d3869b";
+static const char col_violet2[]  = "#8ec07c";
+static const char col_white2[]   = "#ebdbb2";
 
 /* Color schemes */
+
+/*
+   NOTE: FG and BG refer to the foreground and background colors for
+   the bar respectively.
+*/
 static const char *colors[][4] = {
-/*                  FG         BG          Border      Float     */
-	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2,  col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_purple, col_cyan  },
+
+/*                  FG          BG          Border      Border (Floating) */
+	[SchemeNorm] = { col_white2, col_black1, col_black1, col_violet2 },   /* When not focused */
+	[SchemeSel]  = { col_white1, col_black1, col_blue1, col_violet2 },   /* When focused */
 };
 
 /* Tag symbols */
@@ -108,7 +127,7 @@ static const Layout layouts[] = {
    options that can be applied to the initial command.
 */
 static char dmenumon[2] = "0"; /* Used in dwm.c and dmenucmd below to select which monitor dmenu should appear on */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", "Terminus:pixelsize=32:style=bold:antialias=true:autohint=true", "-nb", col_gray1, "-nf", col_gray3, "-sb", col_purple, "-sf", col_gray4, NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenucmd_font, "-nb", col_blue2, "-nf", col_cyan1, "-sb", col_blue1, "-sf", col_cyan2, NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 

@@ -180,8 +180,7 @@ drw_fontset_free(Fnt *font)
 	}
 }
 
-void
-drw_clr_create(Drw *drw, Clr *dest, const char *clrname)
+void drw_clr_create(Drw *drw, Clr *dest, const char *clrname)
 {
 	if (!drw || !dest || !clrname)
 		return;
@@ -190,12 +189,13 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)
 	                       DefaultColormap(drw->dpy, drw->screen),
 	                       clrname, dest))
 		die("error, cannot allocate color '%s'", clrname);
+
+   dest->pixel |= 0xff << 24;
 }
 
 /* Wrapper to create color schemes. The caller has to call free(3) on the
  * returned color scheme when done using it. */
-Clr *
-drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
+Clr * drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
 {
 	size_t i;
 	Clr *ret;
