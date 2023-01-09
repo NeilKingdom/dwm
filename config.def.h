@@ -127,7 +127,7 @@ static const Layout layouts[] = {
    options that can be applied to the initial command.
 */
 static char dmenumon[2] = "0"; /* Used in dwm.c and dmenucmd below to select which monitor dmenu should appear on */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenucmd_font, "-nb", col_blue2, "-nf", col_cyan1, "-sb", col_blue1, "-sf", col_cyan2, NULL };
+static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenucmd_font, "-nb", col_black1, "-nf", col_white2, "-sb", col_black1, "-sf", col_white1, NULL };
 static const char *termcmd[]    = { "st", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 
