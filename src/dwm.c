@@ -47,6 +47,7 @@
 #include <kvm.h>
 #endif /* __OpenBSD__ */
 
+#include "dwm.h"
 #include "drw.h"
 #include "util.h"
 
@@ -74,14 +75,6 @@ enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms *
 enum { ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle,
        ClkClientWin, ClkRootWin, ClkLast }; /* clicks */
 
-typedef union {
-	int i;
-	unsigned int ui;
-	float f;
-   float sf;
-	const void *v;
-} Arg;
-
 typedef struct {
 	unsigned int click;
 	unsigned int mask;
@@ -93,22 +86,22 @@ typedef struct {
 typedef struct Monitor Monitor;
 typedef struct Client Client;
 struct Client {
-	char name[256];
-	float mina, maxa;
-	int x, y, w, h;
-   int sfx, sfy, sfw, sfh; /* Stored float geometry, used on mode revert */
-	int oldx, oldy, oldw, oldh;
-	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;
-	int bw, oldbw;
-	unsigned int tags;
-	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
-   pid_t pid;
-   int issteam;
-	Client *next;
-	Client *snext;
-   Client *swallowing;
-	Monitor *mon;
-	Window win;
+    char name[256];
+    float mina, maxa;
+    int x, y, w, h;
+    int sfx, sfy, sfw, sfh; /* Stored float geometry, used on mode revert */
+    int oldx, oldy, oldw, oldh;
+    int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;
+    int bw, oldbw;
+    unsigned int tags;
+    int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
+    pid_t pid;
+    int issteam;
+    Client *next;
+    Client *snext;
+    Client *swallowing;
+    Monitor *mon;
+    Window win;
 };
 
 typedef struct {
@@ -124,38 +117,38 @@ typedef struct {
 } Layout;
 
 struct Monitor {
-	char ltsymbol[16];
-	float mfact;
-   float smfact;
-	int nmaster;
-	int num;
-	int by;               /* Bar geometry */
-	int mx, my, mw, mh;   /* Screen size */
-	int wx, wy, ww, wh;   /* Window area  */
-   int gappx;            /* Gaps between windows */
-	unsigned int seltags;
-	unsigned int sellt;
-	unsigned int tagset[2];
-	int showbar;
-	int topbar;
-	Client *clients;
-	Client *sel;
-	Client *stack;
-	Monitor *next;
-	Window barwin;
-	const Layout *lt[2];
-   unsigned int alttag;
+    char ltsymbol[16];
+    float mfact;
+    float smfact;
+    int nmaster;
+    int num;
+    int by;               /* Bar geometry */
+    int mx, my, mw, mh;   /* Screen size */
+    int wx, wy, ww, wh;   /* Window area  */
+    int gappx;            /* Gaps between windows */
+    unsigned int seltags;
+    unsigned int sellt;
+    unsigned int tagset[2];
+    int showbar;
+    int topbar;
+    Client *clients;
+    Client *sel;
+    Client *stack;
+    Monitor *next;
+    Window barwin;
+    const Layout *lt[2];
+    unsigned int alttag;
 };
 
 typedef struct {
-	const char *class;
-	const char *instance;
-	const char *title;
-	unsigned int tags;
-	int isfloating;
-   int isterminal;
-   int noswallow;
-	int monitor;
+    const char *class;
+    const char *instance;
+    const char *title;
+    unsigned int tags;
+    int isfloating;
+    int isterminal;
+    int noswallow;
+    int monitor;
 } Rule;
 
 /* function declarations */
@@ -282,21 +275,21 @@ static int sp;               /* Side padding for bar */
 static int (*xerrorxlib)(Display *, XErrorEvent *);
 static unsigned int numlockmask = 0;
 static void (*handler[LASTEvent]) (XEvent *) = {
-	[ButtonPress] = buttonpress,
-	[ClientMessage] = clientmessage,
-	[ConfigureRequest] = configurerequest,
-	[ConfigureNotify] = configurenotify,
-	[DestroyNotify] = destroynotify,
-	[EnterNotify] = enternotify,
-	[Expose] = expose,
-	[FocusIn] = focusin,
-	[KeyPress] = keypress,
-   [KeyRelease] = keyrelease,
-	[MappingNotify] = mappingnotify,
-	[MapRequest] = maprequest,
-	[MotionNotify] = motionnotify,
-	[PropertyNotify] = propertynotify,
-	[UnmapNotify] = unmapnotify
+    [ButtonPress] = buttonpress,
+    [ClientMessage] = clientmessage,
+    [ConfigureRequest] = configurerequest,
+    [ConfigureNotify] = configurenotify,
+    [DestroyNotify] = destroynotify,
+    [EnterNotify] = enternotify,
+    [Expose] = expose,
+    [FocusIn] = focusin,
+    [KeyPress] = keypress,
+    [KeyRelease] = keyrelease,
+    [MappingNotify] = mappingnotify,
+    [MapRequest] = maprequest,
+    [MotionNotify] = motionnotify,
+    [PropertyNotify] = propertynotify,
+    [UnmapNotify] = unmapnotify
 };
 static Atom wmatom[WMLast], netatom[NetLast];
 static int restart = 0;
