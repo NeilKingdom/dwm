@@ -19,17 +19,14 @@ options:
 	@echo "LDFLAGS  = $(LDFLAGS)"
 	@echo "CC       = $(CC)"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_DIR)/config.h
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $< -c -o $@ $(CCFLAGS) $(LDFLAGS)
-
-$(INC_DIR)/config.h:
-	cp $(INC_DIR)/config.def.h $@
 
 dwm: $(OBJS)
 	$(CC) $^ -o $@ $(CCFLAGS) $(LDFLAGS)
 
 clean:
-	rm -f dwm $(OBJ_DIR)/* $(INC_DIR)/config.h
+	rm -f dwm $(OBJ_DIR)/*
 
 dist: clean
 	mkdir -p dwm-$(VERSION)
@@ -48,7 +45,6 @@ install: all
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/dwm.1
 
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/bin/dwm \
-		$(DESTDIR)$(MANPREFIX)/man1/dwm.1
+	rm -f $(DESTDIR)$(PREFIX)/bin/dwm $(DESTDIR)$(MANPREFIX)/man1/dwm.1
 
 .PHONY: all options clean dist install uninstall
