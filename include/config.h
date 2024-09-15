@@ -22,12 +22,12 @@ static const int sidepad           = 5;  /* Horizontal padding of bar */
    specific fonts that were chosen.
 */
 static const char *fonts[2] = {
-    "Terminus:style=Bold:size=14:antialias=true",
+    "Terminess Nerd Font:style=Bold:size=14:antialias=true",
     "Noto Color Emoji:style=Regular:pixelsize=14"
 };
 
 /* Default font for dmenu */
-static const char dmenucmd_font[] = "Terminus:style=Bold:size=14:antialias=true";
+static const char dmenucmd_font[] = "Terminess Nerd Font:style=Bold:size=14:antialias=true";
 /* Default monitor for dmenu */
 static char dmenumon[2] = "0";
 
