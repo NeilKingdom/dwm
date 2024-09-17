@@ -1363,9 +1363,11 @@ void setsmfact(const Arg *arg) {
 
    if (!arg || !selmon->lt[selmon->sellt]->arrange)
       return;
-   sf = arg->sf < 1.0f ? arg->sf + selmon->smfact : arg->sf - 1.0f;
-   if (sf < 0.0f || sf > 0.9f)
+
+   sf = (arg->sf < 1.0f) ? arg->sf + selmon->smfact : arg->sf - 1.0f;
+   if (sf < -0.9f || sf > 0.9f)
       return;
+
    selmon->smfact = sf;
    arrange(selmon);
 }

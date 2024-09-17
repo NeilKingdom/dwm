@@ -14,7 +14,7 @@ X11LIB = /usr/X11R6/lib
 XINERAMALIBS  = -lXinerama
 XINERAMAFLAGS = -DXINERAMA
 
-# freetype
+# Freetype
 FREETYPELIBS = -lfontconfig -lXft
 FREETYPEINC = /usr/include/freetype2
 
@@ -24,8 +24,7 @@ LIBS = -L$(X11LIB) $(XINERAMALIBS) $(FREETYPELIBS) -lX11 -lX11-xcb -lxcb -lxcb-r
 
 # Flags
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\" $(XINERAMAFLAGS)
-#CCFLAGS = -ggdb -std=c99 -pedantic -Wall -O0 $(INCS) $(CPPFLAGS)
-CCFLAGS = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os $(INCS) $(CPPFLAGS)
+CCFLAGS = -std=c99 -Wall -Wno-deprecated-declarations -Os $(INCS) $(CPPFLAGS)
 LDFLAGS = $(LIBS)
 
 CC = gcc
