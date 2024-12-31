@@ -17,19 +17,16 @@ static const int sidepad           = 5;  /* Horizontal padding of bar */
 /*
    Fonts for bar (these are overriden by dmenu).
    Additional fonts are used as fallbacks.
-   Check man fonts-conf(1) to see attributes.
-   See my st config.h for more info on the
-   specific fonts that were chosen.
 */
 static const char *fonts[2] = {
-    "Terminess Nerd Font:style=Bold:size=14:antialias=true",
-    "Noto Color Emoji:style=Regular:pixelsize=14"
+    "Terminess Nerd Font:style=Regular:size=14",
+    "Noto Color Emoji:style=Regular:size=12"
 };
 
 /* Default font for dmenu */
-static const char dmenucmd_font[] = "Terminess Nerd Font:style=Bold:size=14:antialias=true";
+static const char dmenucmd_font[] = "Terminess Nerd Font:style=Regular:size=14";
 /* Default monitor for dmenu */
-static char dmenumon[2] = "0";
+static char dmenumon[] = "0";
 
 /* Default color pallet (Gruvbox dark) */
 static const char col_black1[]  = "#1D2021";
@@ -63,7 +60,7 @@ static const char *colors[][4] = {
 
 /* Tag symbols */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-static const char *tagsalt[] = { "🌐", "📱", "📨", "📑", "", "", "", "", "🗑️" };
+static const char *tagsalt[] = { "🦊", "📅", "📬", "🖥️", "", "", "", "", "🗑️" };
 static const int momentaryalttags = 0; /* Set to 1 to only show alt tags when key is held down */
 
 /*
@@ -75,12 +72,11 @@ static const int momentaryalttags = 0; /* Set to 1 to only show alt tags when ke
 */
 static const Rule rules[] = {
 /*    Class      Instance Title Tags Mask IsFloating IsTerminal NoSwallow Monitor */
-    { "Gimp",    NULL,    NULL, 0,        true,      false,     false,    -1 },
     { "Firefox", NULL,    NULL, (1 << 8), false,     false,     false,    -1 },
     { "st",      NULL,    NULL, 0,        false,     true,      false,    -1 },
 };
 
-/*** Layout(s) ***/
+/*** Layouts ***/
 
 static const float mfact        = 0.5f; /* Default master:slave vertical split ratio */
 static const float smfact       = 0.0f; /* Default slave:slave horizontal split ratio (0 is centered) */
@@ -103,10 +99,10 @@ static Layout layouts[LayoutSize] = {
 /*** Commands ***/
 
 /*
-   The initial string in the list is the command to run.
-   All subsequent strings are a comma-separated list of
-   options that can be applied to the initial command
-   (list must be NULL-terminated).
+    The initial string in the list is the command to run.
+    All subsequent strings are a comma-separated list of
+    options that can be applied to the initial command
+    (list must be NULL-terminated).
 */
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenucmd_font, "-nb", col_black1, "-nf", col_white2, "-sb", col_black1, "-sf", col_white1, NULL };
 static const char *termcmd[]    = { "st", NULL };
@@ -129,9 +125,9 @@ static const char *firefoxcmd[] = { "firefox", NULL };
 */
 static const Key keys[] = {
 /*    Modifier              Key              Function        Argument */
-    { MODKEY,               XK_d,            spawn,          { .v  = dmenucmd }},   /* dmenu */
-    { MODKEY,               XK_Return,       spawn,          { .v  = termcmd }},    /* st */
-    { MODKEY,               XK_w,            spawn,          { .v  = firefoxcmd }}, /* firefox */
+    { MODKEY,               XK_d,            spawn,          { .v  = dmenucmd }},   /* Dmenu */
+    { MODKEY,               XK_Return,       spawn,          { .v  = termcmd }},    /* ST */
+    { MODKEY,               XK_w,            spawn,          { .v  = firefoxcmd }}, /* Firefox */
     { MODKEY | ShiftMask,   XK_s,            spawn,          { .v  = capture }},    /* Run capture script */
     { MODKEY,               XK_j,            focusstack,     { .i  =  1 }},         /* Cycle to next window in the stack */
     { MODKEY,               XK_k,            focusstack,     { .i  = -1 }},         /* Cycle to the previous window in the stack */
