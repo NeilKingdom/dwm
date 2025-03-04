@@ -104,10 +104,10 @@ static Layout layouts[LayoutSize] = {
     options that can be applied to the initial command
     (list must be NULL-terminated).
 */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenucmd_font, "-nb", col_black1, "-nf", col_white2, "-sb", col_black1, "-sf", col_white1, NULL };
-static const char *termcmd[]    = { "st", NULL };
-static const char *capture[]    = { "capture", NULL };
-static const char *firefoxcmd[] = { "firefox", NULL };
+static const char *dmenu_args[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenucmd_font, "-nb", col_black1, "-nf", col_white2, "-sb", col_black1, "-sf", col_white1, NULL };
+static const char *term_args[]    = { "st", NULL };
+static const char *capture_args[] = { "capture", NULL };
+static const char *browser_args[] = { "librewolf", NULL };
 
 /*** Keybindings ***/
 
@@ -125,38 +125,38 @@ static const char *firefoxcmd[] = { "firefox", NULL };
 */
 static const Key keys[] = {
 /*    Modifier              Key              Function        Argument */
-    { MODKEY,               XK_d,            spawn,          { .v  = dmenucmd }},   /* Dmenu */
-    { MODKEY,               XK_Return,       spawn,          { .v  = termcmd }},    /* ST */
-    { MODKEY,               XK_w,            spawn,          { .v  = firefoxcmd }}, /* Firefox */
-    { MODKEY | ShiftMask,   XK_s,            spawn,          { .v  = capture }},    /* Run capture script */
-    { MODKEY,               XK_j,            focusstack,     { .i  =  1 }},         /* Cycle to next window in the stack */
-    { MODKEY,               XK_k,            focusstack,     { .i  = -1 }},         /* Cycle to the previous window in the stack */
-    { MODKEY,               XK_a,            incnmaster,     { .i  =  1 }},         /* Add another master window */
-    { MODKEY,               XK_s,            incnmaster,     { .i  = -1 }},         /* Subtract/demote most recent master to a slave */
-    { MODKEY,               XK_h,            setmfact,       { .f  = -0.05f }},     /* Move vertical split left */
-    { MODKEY,               XK_l,            setmfact,       { .f  =  0.05f }},     /* Move vertical split right */
-    { MODKEY | ShiftMask,   XK_j,            setsmfact,      { .f  = -0.05f }},     /* Move horizontal split down */
-    { MODKEY | ShiftMask,   XK_k,            setsmfact,      { .f  =  0.05f }},     /* Move horizontal split up */
-    { MODKEY,               XK_space,        zoom,           { .ui =  0 }},         /* Swap active window with master */
-    { MODKEY,               XK_q,            killclient,     { .ui =  0 }},         /* Kill active window */
-    { MODKEY | ControlMask, XK_q,            quit,           { .ui =  0 }},         /* Kill DWM */
-    { MODKEY | ShiftMask,   XK_q,            quit,           { .ui =  1 }},         /* Restart DWM */
-    { MODKEY | ShiftMask,   XK_f,            togglefloating, { .ui =  0 }},         /* Snap a floating window back to position according to the current layout */
-    { MODKEY | ShiftMask,   XK_a,            togglealttag,   { .ui =  0 }},         /* Toggle between normal tags and alternative tags */
-    { MODKEY,               XK_b,            togglebar,      { .ui =  0 }},         /* Toggle bar */
-    { MODKEY,               XK_Tab,          view,           { .ui =  0 }},         /* Cycle between current tag and previously selected tag */
-    { MODKEY,               XK_0,            view,           { .ui = ~0 }},         /* Display all tags at once */
-    { MODKEY | ShiftMask,   XK_0,            tag,            { .ui = ~0 }},         /* Active window is duplicated in all tags */
-    { MODKEY,               XK_comma,        focusmon,       { .i  = -1 }},         /* Switch active monitor to the left */
-    { MODKEY,               XK_period,       focusmon,       { .i  =  1 }},         /* Switch active monitor to the right */
+    { MODKEY,               XK_d,            spawn,          { .v  = dmenu_args }},   /* Launch dmenu */
+    { MODKEY,               XK_Return,       spawn,          { .v  = term_args }},    /* Launch terminal */
+    { MODKEY,               XK_w,            spawn,          { .v  = browser_args }}, /* Launch browser */
+    { MODKEY | ShiftMask,   XK_s,            spawn,          { .v  = capture_args }}, /* Run capture script */
+    { MODKEY,               XK_j,            focusstack,     { .i  =  1 }},           /* Cycle to next window in the stack */
+    { MODKEY,               XK_k,            focusstack,     { .i  = -1 }},           /* Cycle to the previous window in the stack */
+    { MODKEY,               XK_a,            incnmaster,     { .i  =  1 }},           /* Add another master window */
+    { MODKEY,               XK_s,            incnmaster,     { .i  = -1 }},           /* Subtract/demote most recent master to a slave */
+    { MODKEY,               XK_h,            setmfact,       { .f  = -0.05f }},       /* Move vertical split left */
+    { MODKEY,               XK_l,            setmfact,       { .f  =  0.05f }},       /* Move vertical split right */
+    { MODKEY | ShiftMask,   XK_j,            setsmfact,      { .f  = -0.05f }},       /* Move horizontal split down */
+    { MODKEY | ShiftMask,   XK_k,            setsmfact,      { .f  =  0.05f }},       /* Move horizontal split up */
+    { MODKEY,               XK_space,        zoom,           { .ui =  0 }},           /* Swap active window with master */
+    { MODKEY,               XK_q,            killclient,     { .ui =  0 }},           /* Kill active window */
+    { MODKEY | ControlMask, XK_q,            quit,           { .ui =  0 }},           /* Kill DWM */
+    { MODKEY | ShiftMask,   XK_q,            quit,           { .ui =  1 }},           /* Restart DWM */
+    { MODKEY | ShiftMask,   XK_f,            togglefloating, { .ui =  0 }},           /* Snap a floating window back to position according to the current layout */
+    { MODKEY | ShiftMask,   XK_a,            togglealttag,   { .ui =  0 }},           /* Toggle between normal tags and alternative tags */
+    { MODKEY,               XK_b,            togglebar,      { .ui =  0 }},           /* Toggle bar */
+    { MODKEY,               XK_Tab,          view,           { .ui =  0 }},           /* Cycle between current tag and previously selected tag */
+    { MODKEY,               XK_0,            view,           { .ui = ~0 }},           /* Display all tags at once */
+    { MODKEY | ShiftMask,   XK_0,            tag,            { .ui = ~0 }},           /* Active window is duplicated in all tags */
+    { MODKEY,               XK_comma,        focusmon,       { .i  = -1 }},           /* Switch active monitor to the left */
+    { MODKEY,               XK_period,       focusmon,       { .i  =  1 }},           /* Switch active monitor to the right */
     { MODKEY | ShiftMask,   XK_comma,        tagmon,         { .i  = -1 }},
     { MODKEY | ShiftMask,   XK_period,       tagmon,         { .i  =  1 }},
-    { MODKEY,               XK_equal,        setgaps,        { .i  =  0 }},         /* Reset gaps */
-    { MODKEY,               XK_minus,        setgaps,        { .i  =  5 }},         /* Increase gaps */
-    { MODKEY | ShiftMask,   XK_equal,        setgaps,        { .i  = -5 }},         /* Decrease gaps */
-    { MODKEY | ShiftMask,   XK_bracketright, mpdchange,      { .i  =  1 }},         /* Go to next song */
-    { MODKEY,               XK_bracketleft,  mpdchange,      { .i  = -1 }},         /* Go to previous song */
-    { MODKEY,               XK_bracketright, mpdcontrol,     { .i  =  0 }},         /* Stop song */
+    { MODKEY,               XK_equal,        setgaps,        { .i  =  0 }},           /* Reset gaps */
+    { MODKEY,               XK_minus,        setgaps,        { .i  =  5 }},           /* Increase gaps */
+    { MODKEY | ShiftMask,   XK_equal,        setgaps,        { .i  = -5 }},           /* Decrease gaps */
+    { MODKEY | ShiftMask,   XK_bracketright, mpdchange,      { .i  =  1 }},           /* Go to next song */
+    { MODKEY,               XK_bracketleft,  mpdchange,      { .i  = -1 }},           /* Go to previous song */
+    { MODKEY,               XK_bracketright, mpdcontrol,     { .i  =  0 }},           /* Stop song */
     { MODKEY,               XK_t,            setlayout,      { .v  = &layouts[Tile] }},
     { MODKEY,               XK_m,            setlayout,      { .v  = &layouts[Monicle] }},
     { MODKEY,               XK_u,            setlayout,      { .v  = &layouts[BStack] }},
@@ -207,7 +207,7 @@ static const Button buttons[] = {
     { ClkLtSymbol,   0,         Button1, setlayout,      { 0 }},
     { ClkLtSymbol,   0,         Button3, setlayout,      { .v = &layouts[Monicle] }},
     { ClkWinTitle,   0,         Button2, zoom,           { 0 }},
-    { ClkStatusText, 0,         Button2, spawn,          { .v = termcmd }},
+    { ClkStatusText, 0,         Button2, spawn,          { .v = term_args }},
     { ClkClientWin,  MODKEY,    Button1, movemouse,      { 0 }},
     { ClkClientWin,  MODKEY,    Button2, togglefloating, { 0 }},
     { ClkClientWin,  MODKEY,    Button3, resizemouse,    { 0 }},
